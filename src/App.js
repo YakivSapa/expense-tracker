@@ -1,5 +1,5 @@
 // import CostItem from "./components/CostItem";
-import Costs from "./components/Costs";
+import Costs from "./components/Costs/Costs";
 
 function App() {
 
