@@ -1,45 +1,27 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './CostForm.css';
 
 const CostForm = (props) => {
 
-    const [inputName, setInputName] = useState('');
-    const [inputAmount, setInputAmount] = useState('');
-    const [inputDate, setInputDate] = useState('');
-
-    // const [userInput, setUserInput] = useState({
-    //     name: '',
-    //     amount: '',
-    //     date: ''
-    // });
+    const [inputName, setInputName] = useState("");
+    const [inputAmount, setInputAmount] = useState("");
+    const [inputDate, setInputDate] = useState("");
 
     const nameChangeHandler = (event) => {
         setInputName(event.target.value);
-        // setUserInput({
-        //     ...userInput,
-        //     name: event.target.value
-        // })
     };
     const amountChangeHandler = (event) => {
         setInputAmount(event.target.value);
-        // setUserInput({
-        //     ...userInput,
-        //     amount: event.target.value
-        // })
     };
     const dateChangeHandler = (event) => {
         setInputDate(event.target.value);
-        // setUserInput({
-        //     ...userInput,
-        //     date: event.target.value
-        // })
     };
 
     const submitHandler = (event) => {
         event.preventDefault();
 
         const costData = {
-            name: inputName,
+            description: inputName,
             amount: inputAmount,
             date: new Date(inputDate),
         };
@@ -55,7 +37,7 @@ const CostForm = (props) => {
             <div className="new-cost__controls">
                 <div className="new-cost__control">
                     <label>Name:</label>
-                    <input type="text" value={inputName} onChange={nameChangeHandler} />
+                    <input value={inputName} onChange={nameChangeHandler} type="text" />
                 </div>
                 <div className="new-cost__control">
                     <label>Sum:</label>
@@ -70,7 +52,7 @@ const CostForm = (props) => {
                 </div>
             </div>
         </form>
-    )
-}
+    );
+};
 
 export default CostForm;
