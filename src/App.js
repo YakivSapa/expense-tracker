@@ -5,7 +5,7 @@ import Costs from "./components/Costs/Costs";
 const INITIAL_C0STS = [
   {
     id: 'c1',
-    date: new Date(2021, 2, 12),
+    date: new Date(2023, 4, 5),
     description: "Fridge",
     amount: 999.99,
   },
